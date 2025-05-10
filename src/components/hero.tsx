@@ -24,10 +24,10 @@ export default function Hero() {
       }}
       className="w-full pt-6 pb-12 sm:pt-10 sm:pb-16 md:pt-20 md:pb-24 overflow-hidden"
     >
-      <div className="  flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-4 md:pl-[6em] md:pr-0">
+      <div className="  flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-0 md:pl-[6em] md:pr-0">
         {/* Left: Headline and CTA */}
         <motion.div
-          className="flex-1 flex flex-col items-center md:items-start max-w-xl"
+          className="flex-1 flex flex-col items-center md:items-start max-w-2xl px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isMounted ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -93,14 +93,14 @@ export default function Hero() {
 
         {/* Right: Card and Woman Image - Positioned better on mobile */}
         <motion.div
-          className="flex-1 flex items-end justify-end relative w-full max-w-xs sm:max-w-sm md:max-w-lg mt-8 md:mt-0 "
+          className="flex-1 flex items-end justify-end relative w-full  sm:max-w-sm md:max-w-lg mt-8 md:mt-0  "
           initial={{ opacity: 0, x: 20 }}
           animate={isMounted ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           {/* Card image with hover effect */}
           <motion.div
-            className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 origin-center"
+            className="absolute -left-4  top-1/2 -translate-y-1/2 z-10 origin-center"
             whileHover={{ rotate: -5, scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
@@ -109,14 +109,14 @@ export default function Hero() {
               alt="Hydrogen Card"
               width={530}
               height={340}
-              className="w-32 sm:w-40 md:w-[300px] lg:w-[450px] h-auto object-contain"
+              className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[655px] h-auto object-contain"
               priority
             />
           </motion.div>
 
           {/* Woman holding phone */}
           <motion.div
-            className="relative z-20 ml-16 sm:ml-20 md:ml-28 lg:ml-32"
+            className="relative z-20 ml-16  sm:ml-20 md:ml-28 lg:ml-32"
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.3 }}
           >
@@ -125,7 +125,7 @@ export default function Hero() {
               alt="Woman holding phone"
               width={340}
               height={340}
-              className="w-[200px] sm:w-[250px] md:w-[400px] lg:w-[655px] h-auto rounded-xl object-cover "
+              className="w-[400px] sm:w-[250px] md:w-[400px] lg:w-[655px] h-auto rounded-xl object-cover "
               priority
             />
           </motion.div>
