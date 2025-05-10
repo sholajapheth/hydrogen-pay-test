@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 
 const features = [
   {
@@ -23,7 +22,6 @@ const features = [
 ];
 
 export default function FeaturesSection() {
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
   const [isMounted, setIsMounted] = useState(false);
 
   // Handle animation mounting
@@ -33,14 +31,10 @@ export default function FeaturesSection() {
 
   return (
     <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={inView && isMounted ? "visible" : "hidden"}
-      variants={{
-        visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-        hidden: { opacity: 0, y: 40, transition: { duration: 0.7 } },
-      }}
-      className="w-full  py-16 md:py-24 px-4 md:px-0"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="w-full py-16 md:py-24 px-4 md:px-0"
     >
       <div className="container mx-auto flex flex-col items-center text-center">
         <motion.h2
