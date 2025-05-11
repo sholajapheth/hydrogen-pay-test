@@ -43,7 +43,7 @@ const legalLinks = [
 
 export default function FooterSection() {
   return (
-    <footer className="w-full  pt-16 pb-8 px-4 md:px-0">
+    <footer className="w-full  pt-0 md:pt-16 pb-8 px-4 md:px-0">
       {/* Newsletter Signup */}
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 pb-12 ">
         <div className="text-center md:text-left">
@@ -54,15 +54,15 @@ export default function FooterSection() {
             We&apos;ll send you a nice letter once per week. No spam.
           </p>
         </div>
-        <form className="flex w-full max-w-md md:max-w-xs mx-auto md:mx-0 mt-4 md:mt-0">
+        <form className="flex gap-2 w-auto mx-auto md:mx-0 mt-4 md:mt-0">
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 rounded-l-md px-4 py-2 bg-neutral-900 text-white border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-[#FDE933]"
+            className="flex-1 rounded-md px-4 py-2 bg-white text-black border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-[#FDE933] min-w-[280px]"
           />
           <button
             type="submit"
-            className="bg-[#FCE300] text-black font-semibold px-6 py-2 rounded-r-md hover:bg-yellow-300 transition-colors cursor-pointer"
+            className="bg-[#FCE300] text-black font-semibold px-6 py-2 rounded-md hover:bg-yellow-300 transition-colors cursor-pointer"
           >
             Subscribe
           </button>

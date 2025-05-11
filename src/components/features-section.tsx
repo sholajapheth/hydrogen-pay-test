@@ -58,7 +58,7 @@ export default function FeaturesSection() {
           payment security solutions. This service ensures secure, effective,
           and efficient cardholder experience.
         </motion.p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
@@ -82,11 +82,11 @@ export default function FeaturesSection() {
                   alt={feature.title}
                   width={320}
                   height={200}
-                  className="rounded-xl mb-6 w-full h-[240px] object-cover"
+                  className="rounded-xl mb-6 w-full h-[250px] object-cover"
                 />
               </motion.div>
               <motion.h3
-                className="text-xl font-semibold text-white mb-2"
+                className="text-xl md:text-[27px] font-semibold text-white mb-2"
                 initial={{ opacity: 0 }}
                 animate={isMounted ? { opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.5 + idx * 0.1 }}

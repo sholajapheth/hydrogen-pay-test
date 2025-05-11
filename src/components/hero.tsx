@@ -39,14 +39,14 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Get a<br className="hidden md:block" />{" "}
-            <span className="md:inline">Hydrogen card</span>
+            <span className="md:inline">Hydrogen card,</span>
             <br className="hidden md:block" />{" "}
             <span className="md:inline">no maintenance</span>
             <br className="hidden md:block" />{" "}
             <span className="md:inline">fee.</span>
           </motion.h1>
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-neutral-300 mb-6 md:mb-8 text-center md:text-left max-w-md"
+            className="text-base sm:text-lg md:text-xl text-neutral-300 mb-6 md:mb-8 text-center md:text-left max-w-lg"
             initial={{ opacity: 0 }}
             animate={isMounted ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}

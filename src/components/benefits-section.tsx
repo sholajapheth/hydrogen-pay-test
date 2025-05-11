@@ -127,7 +127,7 @@ export default function BenefitsSection() {
           </motion.h2>
 
           <motion.ul
-            className="space-y-4 text-base sm:text-lg md:text-xl text-[#737373] mb-8 text-center md:text-left"
+            className="space-y-4 text-base sm:text-lg md:text-[24px] text-[#737373] mb-8 text-center md:text-left"
             variants={listVariants}
             initial="hidden"
             animate={isMounted ? "visible" : "hidden"}

@@ -58,7 +58,7 @@ export default function BenefitsSection() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
         hidden: { opacity: 0, y: 40, transition: { duration: 0.7 } },
       }}
-      className="w-full py-16 md:py-24 px-4 md:px-0 overflow-hidden"
+      className="w-full pt-0 py-16 md:py-24 px-4 md:px-0 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
         {/* Left: Text content */}
